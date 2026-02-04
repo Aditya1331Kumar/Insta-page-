@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #0b3c91;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  background: #ff7a00;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.small-text {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.primary-btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  font-size: 16px;
+  background: #0b3c91;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+.section h2 {
+  font-size: 32px;
+  color: #0b3c91;
+}
+
+.sub {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* CLASS BUTTONS */
+.class-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.class-buttons button {
+  padding: 12px 22px;
+  background: #ff7a00;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.class-buttons button:hover {
+  transform: translateY(-5px);
+}
+
+/* BLUE SECTION */
+.blue-bg {
+  background: #0b3c91;
+  color: #fff;
+}
+
+.blue-bg h2,
+.blue-bg .sub {
+  color: #fff;
+}
+
+/* CTA BUTTONS */
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.outline-btn {
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.call-btn {
+  padding: 12px 25px;
+  background: #ff7a00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.whatsapp-btn {
+  padding: 12px 25px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #0b3c91;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
+
+/* 🔥 ONE SCREEN MOBILE VIEW */
+@media (max-width: 600px) {
+
+  body {
+     /* no scroll */
+  }
+
+  .navbar {
+    padding: 6px 14px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 35vh;
+    padding: 1px 1px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .small-text {
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .primary-btn {
+    padding: 9px 18px;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  /* STUDY RESOURCES */
+  #resources.section {
+    padding: 18px 10px;
+  }
+
+  #resources h2 {
+    font-size: 20px;
+  }
+
+  #resources .sub {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .class-buttons {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  .class-buttons button {
+    padding: 6px 10px;
+    font-size: 11px;
+    border-radius: 14px;
+  }
+
+  /* HOME TUITION */
+  #tuition.section {
+    padding: 18px 10px;
+  }
+
+  #tuition h2 {
+    font-size: 20px;
+  }
+
+  #tuition .sub {
+    font-size: 12px;
+  }
+
+  .cta-buttons {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  .outline-btn,
+  .call-btn,
+  .whatsapp-btn {
+    padding: 7px 14px;
+    font-size: 11.5px;
+    border-radius: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 6px;
+    font-size: 10.5px;
+  }
+
+}
+
